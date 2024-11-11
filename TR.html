@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Diary</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="GNE LOOG.png" alt="GNDEC"></a>
+            <h1>Training TR-102 Daily Report</h1>
+            <h2>Daily Diary</h2>
+            <p>Submitted by:<br>Gunjan<br>URN 2203430 D2 CSE C2<br>Guru Nanak Dev Engineering College, Gill Park, Ludhiana</p>
+            <h2>4 Weeks Summer Training<br>on<br>Intelligent Predictive Meeting Minutes Generation and Decision Support System</h2>
+        </header>
+
+        <nav class="days-nav">
+            <ul>
+                <script>
+                    for (let i = 1; i <= 20; i++) {
+                        document.write(`<li><a href="#" onclick="showSection('day${i}')">Day ${i}</a></li>`);
+                    }
+                </script>
+            </ul>
+        </nav>
+
+        <div class="diary-sections">
+            <script>
+                for (let i = 1; i <= 20; i++) {
+                    document.write(`
+                        <section id="day${i}" class="section">
+                            <h1>Training Report Day ${i}</h1>
+                            <div class="pdf-container">
+                                <iframe src="pdfs\\day${i}.pdf"></iframe>
+                            </div>
+                        </section>
+                    `);
+                }
+            </script>
+        </div>
+
+        <footer>
+            <a href="http://linkedin.com/in/gunjan-sohal-5698721ba">
+                <img src="linkdn.jpeg" alt="LinkedIn" height="30px">
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+            document.getElementById('day1').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
